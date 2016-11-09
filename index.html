@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="utf8">
+		<title>Bubble Shootah</title>
+		<link href="_css/main.css" rel="stylesheet">
+		<script src="_js/head.min.js"></script>
+        <script>
+            head.load("_js/jquery-3.1.1.min.js", "_js/modernizr-custom.js", "_js/ui.js", "_js/game.js");
+        </script>
+	</head>
+	<body>
+		<script>
+            head.ready("_js/jquery-3.1.1.min.js", function () {
+                $(function(){
+					var game = new BubbleShoot.Game();
+					game.init();
+				})
+            });
+        </script>
+		<div id="page">
+			<div id="top_bar"></div>
+			<div id="game"></div>
+			<div id="footer_bar"></div>
+			<div id="start_game" class="dialog">
+				<div id="start_game_message">
+					<h2>Start a new game</h2>
+				</div>
+				<div class="but_start_game button">
+					New Game
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
