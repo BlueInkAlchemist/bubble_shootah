@@ -4,14 +4,15 @@
 		<meta charset="utf8">
 		<title>Bubble Shootah</title>
 		<link href="_css/main.css" rel="stylesheet">
+		<link href="_css/game.css" rel="stylesheet">
 		<script src="_js/head.min.js"></script>
         <script>
-            head.load("_js/jquery-3.1.1.min.js", "_js/modernizr-custom.js", "_js/ui.js", "_js/game.js");
+            head.load("_js/jquery-3.1.1.min.js", "_js/modernizr-custom.js", "_js/bubble.js", "_js/ui.js", "_js/game.js", "_js/board.js", "_js/collision-detector.js");
         </script>
 	</head>
 	<body>
 		<script>
-            head.ready("_js/jquery-3.1.1.min.js", function () {
+            head.ready(function () {
                 $(function(){
 					var game = new BubbleShoot.Game();
 					game.init();
@@ -20,7 +21,10 @@
         </script>
 		<div id="page">
 			<div id="top_bar"></div>
-			<div id="game"></div>
+			<div id="game">
+				<div id="board"></div>
+				<div id="bubbles_remaining"></div>
+			</div>
 			<div id="footer_bar"></div>
 			<div id="start_game" class="dialog">
 				<div id="start_game_message">
